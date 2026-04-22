@@ -1,0 +1,9 @@
+<div class="container">
+  <app-hero *ngFor="let h of heroes" [hero]="h" (onMissionDone)="markAsDone(h)"(click)="heroSelected = h">
+  </app-hero>
+</div>
+<p>Missioni completate: {{totalCompleted}}</p>
+
+
+<h1>Modifica eroe</h1>
+<app-hero-edit (onHeroEdited)="savehero($event)" [hero]="heroSelected"></app-hero-edit>
