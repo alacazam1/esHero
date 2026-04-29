@@ -1,6 +1,8 @@
 <div>
-    <input type="text" [(ngModel)]="hero.id">
-    <input type="text" [(ngModel)]="hero.nome">
-    <input type="text" [(ngModel)]="hero.potere">
-    <button (click)="saveHero()">Save Hero</button>
+    <input placeholder="IDDDDDIOCANE" type="number" [(ngModel)]="hero.id" name="id"><br><br>
+    <input placeholder="NICKNAMEEEEEEE" type="text" [(ngModel)]="hero.nome" name="nome"><br><br>
+    <input placeholder="POWEEEEEER" type="text" [(ngModel)]="hero.potere" name="potere"><br><br>
+    <button (click)="savehero(hero)">Salva</button>
+
+
 </div>

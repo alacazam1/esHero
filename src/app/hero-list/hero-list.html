@@ -1,0 +1,10 @@
+
+
+<div>
+    
+  <app-hero *ngFor="let h of getHeros()" [hero]="h" (onMissionDone)="markAsDone(h)" (click)="heroSelected = h" >
+    
+  </app-hero>
+</div>
+<p>Missioni completate: {{totalCompleted}}</p>
+<!-- (onMissionDone)="markAsDone(h)"(click)="heroSelected = h" -->

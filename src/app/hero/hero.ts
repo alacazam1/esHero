@@ -10,7 +10,6 @@ import { HeroT } from '../model/hero.model';
 export class Hero {
   @Input() hero!: HeroT;
   @Output() onMissionDone = new EventEmitter<HeroT>;
-
 }
 
 
