@@ -2,10 +2,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HeroT } from '../model/hero.model';
 import { HeroService } from '../hero-service';
+import { Hero } from '../hero/hero';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-hero-edit',
-  imports: [FormsModule],
+  imports: [Hero, FormsModule, CommonModule],
   templateUrl: './hero-edit.html',
   styleUrl: './hero-edit.css',
 })
