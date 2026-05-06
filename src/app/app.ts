@@ -8,13 +8,10 @@ import { HeroService } from './hero-service';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterLink, RouterOutlet,Hero],
+  imports: [CommonModule, RouterLink, RouterOutlet],
   templateUrl: 'app.html',
   styleUrl: 'app.css'
 })
-export class App {
-
-
-}
+export class App {}
 
 const heroes: Hero[] = [];

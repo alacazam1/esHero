@@ -2,17 +2,17 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HeroT } from '../model/hero.model';
 import { HeroService } from '../hero-service';
-import { Hero } from '../hero/hero';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero-edit',
-  imports: [Hero, FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './hero-edit.html',
   styleUrl: './hero-edit.css',
 })
 export class HeroEdit {
-  constructor (private heroService: HeroService) {}
+  constructor (private heroService: HeroService, private router: Router) {}
 
   nuovoHero: HeroT = {} as HeroT;
   
@@ -26,6 +26,7 @@ export class HeroEdit {
     } else {  // se non è presente, lo aggiungo alla lista
       this.heroService.addHero(hero);
     }
+    this.router.navigate(['/list']);
 
   }
 
